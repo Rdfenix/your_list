@@ -1,0 +1,19 @@
+{
+  "name": "your_list",
+  "version": "1.0.0",
+  "description": "Front-end da aplicação Your List",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rdfenix/your_list.git"
+  },
+  "author": "Rudnei Carlos de Oliveira",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Rdfenix/your_list/issues"
+  },
+  "homepage": "https://github.com/Rdfenix/your_list#readme"
+}
