@@ -1,6 +1,6 @@
-const path = require('path');
-const webpack = require('webpack');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const path = require('path')
+const webpack = require('webpack')
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 module.exports = {
     entry: './src/index.jsx',
@@ -10,7 +10,7 @@ module.exports = {
     },
     devServer: {
         port: 8080,
-        contentBase: './public'
+        contentBase: './public',
     },
     resolve: {
         extensions: ['.js', '.jsx'],
@@ -34,11 +34,11 @@ module.exports = {
                 use: 'css-loader'
             })
         }, {
-            test: /\.woff|.woff2|.tff|.eot|.svg*.*$/,
+            test: /\.woff|.woff2|.ttf|.eot|.svg*.*$/,
             loader: 'file-loader'
         }]
     },
-    plugins: [
+    plugins: [ 
         new ExtractTextPlugin('app.css')
     ]
 }
