@@ -11,6 +11,7 @@ export default class AddPhone extends Component {
         this.refresh()
         this.handleAddPhone = this.handleAddPhone.bind(this)
         this.handleChange = this.handleChange.bind(this)
+        this.handleDelete = this.handleDelete.bind(this)
 
     }
 
@@ -31,6 +32,12 @@ export default class AddPhone extends Component {
         this.setState({phones: this.state.phones.concat([{phone: ''}])})
     }
 
+    handleDelete(id){
+        const {phones} = this.state
+        const index = phones.indexOf(1)
+        this.setState({phones: this.state.phones.filter(_id => _id !== id)})
+    }
+
     render(){
         return(
             <div className="container margin-phone-register">
@@ -46,6 +53,9 @@ export default class AddPhone extends Component {
                             <div className="form-group">
                                 <input type="text" name={`phone${id}`}  onChange={(e) => this.handleChange(id, e)} value={phoneItem.phone} className="form-control" placeholder="Telefone"/>
                             </div>
+                        </div>
+                        <div className="col-md-4">
+                            <IconButton style="danger" icon="trash-o" onClick={() => this.handleDelete(phoneItem)} />
                         </div>
                     </div>
                 ))}
